@@ -89,6 +89,8 @@ Ao fazer o deploy no Railway, você precisará configurar as seguintes variávei
 
 *   **`VITE_SPREADSHEET_URL`**: A URL da sua planilha Google Sheets (ex: `https://docs.google.com/spreadsheets/d/SEU_ID_DA_PLANILHA/export?format=csv&gid=0`).
 *   **`VITE_WEBHOOK_URL`**: A URL do seu webhook para o chatbot (ex: `https://seuw.ebhook.url/`).
+*   **`VITE_SUPABASE_URL`**: A URL do seu projeto Supabase (encontrada no painel do Supabase, em "Project Settings" > "API").
+*   **`VITE_SUPABASE_ANON_KEY`**: A chave "anon public" do seu projeto Supabase (encontrada no painel do Supabase, em "Project Settings" > "API").
 
 A variável `PORT` é injetada automaticamente pelo Railway e não precisa ser configurada manualmente.
 
