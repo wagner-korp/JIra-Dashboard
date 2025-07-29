@@ -1,0 +1,5 @@
+{
+  "name": "Jira Project Dashboard",
+  "description": "An interactive dashboard for visualizing Jira ticket data, providing insights into project status, priorities, and team workload.",
+  "requestFramePermissions": []
+}
