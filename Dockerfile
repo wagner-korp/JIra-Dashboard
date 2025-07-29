@@ -8,8 +8,8 @@ WORKDIR /app
 # Copia os arquivos de manifesto de pacotes
 COPY package.json package-lock.json ./
 
-# Instala as dependências do projeto
-RUN npm install
+# Instala as dependências do projeto de forma otimizada para CI
+RUN npm ci
 
 # Copia o restante do código-fonte da aplicação
 COPY . .
@@ -22,8 +22,8 @@ RUN npm run build
 # Usamos uma imagem Nginx leve (baseada em Alpine) para servir os arquivos
 FROM nginx:stable-alpine
 
-# Instala o gettext-base que contém o envsubst
-RUN apk update && apk add --no-cache gettext-base
+# Instala o gettext que contém o envsubst
+RUN apk update && apk add --no-cache gettext
 
 # Copia os arquivos estáticos gerados no estágio de build
 # para o diretório padrão do Nginx
